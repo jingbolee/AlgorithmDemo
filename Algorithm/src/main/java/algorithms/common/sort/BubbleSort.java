@@ -4,7 +4,7 @@ import algorithms.Utils;
 
 /**
  * 基础算法-冒泡排序
- * 基本思路：两年比较相邻记录的关键字，如果反序则交换，直到没有反序的记录为止
+ * 基本思路：两两比较相邻记录的关键字，如果反序则交换，直到没有反序的记录为止
  */
 public class BubbleSort {
 
@@ -39,6 +39,17 @@ public class BubbleSort {
         Utils.printArray(array);
     }
 
+    public static void bubbleSort2(int[] array) {
+        for (int i = 0; i < array.length-1; i++) {
+            for (int j = 0; j < array.length - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    Utils.swap(array, j, j + 1);
+                }
+            }
+        }
+        Utils.printArray(array);
+    }
+
     /**
      * 改进的冒泡排序算法
      */
@@ -63,7 +74,7 @@ public class BubbleSort {
     public static void main(String... args) {
         int[] a = {9, 1, 5, 8, 3, 7, 4, 6, 2};
         int[] b = {1, 2, 3, 4, 5, 6, 7, 8, 8};
-        BubbleSort.improveBubbleSort(a);
+        BubbleSort.improveBubbleSort(b);
     }
 
 
