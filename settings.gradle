@@ -1,2 +1,4 @@
-rootProject.name = 'algorithm'
+rootProject.name = 'AlgorithmDemo'
+include 'Algorithm'
+findProject(':Algorithm')?.name = 'algorithm'
 

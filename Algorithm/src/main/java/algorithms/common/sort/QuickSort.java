@@ -1,4 +1,4 @@
-package sort;
+package algorithms.common.sort;
 
 /**
  * 快速排序
