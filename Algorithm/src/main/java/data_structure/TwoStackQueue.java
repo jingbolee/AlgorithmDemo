@@ -61,6 +61,18 @@ public class TwoStackQueue<E> {
     }
 
     public int count() {
-        return stackB.capacity() + stackA.capacity();
+        return stackB.size() + stackA.size();
+    }
+
+    public static void main(String... args) {
+        TwoStackQueue<String> stackQueue = new TwoStackQueue<>();
+        for (int i = 0; i < 10; i++) {
+            stackQueue.add(i + "");
+            System.out.println("入队：" + i);
+        }
+        int count = stackQueue.count();
+        for (int i = 0; i < count; i++) {
+            System.out.println("出队：" + stackQueue.offer());
+        }
     }
 }
