@@ -82,7 +82,7 @@ public class BinarySearch {
         int[] array = {1, 2, 3, 3, 4, 6, 7, 8, 9};
         BinarySearch search = new BinarySearch();
 //        int i = search.binarySearch(array, 9);
-        int i = search.binarySeayrchEnd(array, 3);
+        int i = search.binarySearchFirst(array, 5);
         System.out.println(i);
     }
 
