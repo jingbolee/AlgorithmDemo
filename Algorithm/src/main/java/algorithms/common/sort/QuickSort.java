@@ -31,6 +31,35 @@ public class QuickSort {
         Utils.printArray(array);
         quickSort(array, _left, left - 1);
         quickSort(array, right + 1, _right);
+    }
+
+    public static void quick(int[] array) {
+        if (array.length > 0) {
+            quickSort2(array, 0, array.length - 1);
+        }
+    }
+
+    private static void quickSort2(int[] array, int low, int high) {
+        if (low > high) {
+            return;
+        }
+        int left = low;
+        int right = high;
+        int tem = array[left];
+        if (left < right) {
+            while (left < right && array[right] > tem) {
+                right--;
+                array[left] = array[right];
+            }
+
+            while (left < right && array[left] < tem) {
+                left++;
+                array[right] = array[left];
+            }
+            array[left] = tem;
+            quickSort2(array, low, left);
+            quickSort2(array, left, high);
+        }
 
     }
 
@@ -38,5 +67,6 @@ public class QuickSort {
         int[] a = {9, 1, 5, 8, 3, 7, 4, 6, 2};
         QuickSort.quickSort(a, 0, a.length - 1);
 
+//        new ChildClass();
     }
 }

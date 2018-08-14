@@ -1,4 +1,6 @@
-package algorithms;
+package data_structure;
+
+import algorithms.Node;
 
 import java.util.ArrayList;
 
