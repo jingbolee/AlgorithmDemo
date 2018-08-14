@@ -1,10 +1,10 @@
 
-package data_structure;
+package offer;
 
 import java.util.Stack;
 
 /**
- * 两个栈实现队列
+ * 5. 两个栈实现队列
  * 栈特点：先进后出
  * 队列特点：先进先出
  * 思路：
@@ -13,11 +13,11 @@ import java.util.Stack;
  * 3. 栈A 的元素往栈B元素压入，必须一次性全部都压入
  * 4. 栈B 的元素为空，把栈A元素全部都压入栈B，栈B不为空，不可压入元素
  */
-public class TwoStackQueue<E> {
+public class Problem5<E> {
     private Stack<E> stackA;
     private Stack<E> stackB;
 
-    public TwoStackQueue() {
+    public Problem5() {
         stackA = new Stack<>();
         stackB = new Stack<>();
     }
@@ -65,7 +65,7 @@ public class TwoStackQueue<E> {
     }
 
     public static void main(String... args) {
-        TwoStackQueue<String> stackQueue = new TwoStackQueue<>();
+        Problem5<String> stackQueue = new Problem5<>();
         for (int i = 0; i < 10; i++) {
             stackQueue.add(i + "");
             System.out.println("入队：" + i);

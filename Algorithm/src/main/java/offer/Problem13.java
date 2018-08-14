@@ -1,15 +1,15 @@
-package data_structure;
+package offer;
 
 import algorithms.Node;
 
 import java.util.Stack;
 
 /**
- * 链表翻转，用 Java 逆序打印链表
+ * 13.链表翻转，用 Java 逆序打印链表
  * 使用栈来实现链表的翻转，先把链表放入到栈中，然后打印栈
  * 利用了栈的特点是先进后出
  */
-public class ReverseLinkedList {
+public class Problem13 {
 
     public static void reverseLinkedNode(Node node) {
         Stack<Node> stack = new Stack<>();

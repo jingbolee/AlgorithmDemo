@@ -1,11 +1,12 @@
-package data_structure;
+package offer;
 
 import algorithms.Node;
 
 /**
- * 合并排序好的链表，并实现排序
+ * 14.合并两个排序的链表
+ * 输入两个递增排序的链表，合并这两个链表并使新链表中的结点仍然是按照递增排序的。
  */
-public class LinkedSort {
+public class Problem14 {
 
     /**
      * 使用递归的方式
